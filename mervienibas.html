@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            body {background-image: url("images/cipari.jpg");}
+            form   {font-size: 20px; background-color: rgb(220,220,0);}
+           
+        </style>
+        <title>Informācijas daudzuma mērvienības</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <form>
+        <p>GB<input name="GB"></p>
+        <p><input onclick="MB.value=converToMB(GB.value);" name="poga" value="izteikt megabaitos" type="button"> MB<input name="MB"></p>
+        <p><input onclick="MiB.value=converToMiB(GB.value);" name="poga" value="izteikt mibibaitos" type="button"> MiB<input name="MiB"></p>
+        </form>
+        
+        <script>
+            function converToMB(GB){
+                let result = GB * 1000;
+                return result;
+            }
+            function converToMiB(GB){
+                let result = GB * 1024;
+                return result;
+            }
+            
+            
+        </script>
+    </body>
+</html>
